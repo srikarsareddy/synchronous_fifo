@@ -52,22 +52,3 @@ Tested on EDA Playground with Siemens EDA Questa 2022.2.
    - **Open EPWave after run:** checked (optional)
 5. Click **Run**. The log should end with `TEST PASSED`.
 
-### Option 2: Local Icarus Verilog
-
-```bash
-make run     # compile and simulate
-make wave    # open the waveform in GTKWave (optional)
-make clean   # remove generated files
-```
-
-### Option 3: Local Questa
-
-```bash
-make questa
-```
-
-## Notes and learning log
-
-- **Remember:** `data_out` shows up one cycle after the read. The checker waits one cycle for this reason.
-- **Remember:** Full is checked against the pre-edge state, so a write is rejected on a full FIFO even if a read happens on the same edge.
-- **Remember:** Verilog has no queues, so the reference model uses a circular array with head and tail indices.
