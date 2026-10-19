@@ -1,0 +1,13 @@
+# Simulation outputs
+sim
+*.vvp
+*.vcd
+*.log
+work/
+csrc/
+simv*
+*.key
+
+# Questa
+transcript
+*.wlf
